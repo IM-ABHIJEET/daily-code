@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+  int arr[10]={0,2,5,6};
+  cout << "address of first element is__" << arr << endl; //yha par arr lihkne se phle element ka address print ho jayega 
+  cout << arr[0] << endl; //yha par phla element print hoga
+  cout << "address of first element is__" << &arr[0] << endl; //aise bhi hm address print kra skte h
+  cout << "4th" << *arr << endl;
+  cout << *arr+1 << endl; //yha pr ye bs arr[0] ke element me 1 add kr dega
+  cout << *(arr+1) << endl;//yha index +1 hojayega phir uski value print ho jayegi
+  cout << *(arr)+1 << endl;//line 11 or 13 same honge
+   return 0;
+}
+  
+  //*hum agar aise likhte h arr[i] to wo aise evaluate hota h *(arr+i) or arr[i]=*(arr+i)*//

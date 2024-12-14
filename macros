@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+
+#define PI 3.14
+
+int main() {
+    double r;
+    /*here PI can be intialized as double PI=3.14 but this will aquire a memory sapce somewhere but using Macros we can overcome this and will be helpfull too*/
+    cin>>r;
+    double area=PI*r*r;
+    cout<< "Area is "<< area; 
+ 
+ 
+}

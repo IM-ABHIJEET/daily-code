@@ -1,0 +1,8 @@
+what is recursion?
+==>> Function calls it self....
+     The Process in which the function call itslef directly or indirectly is called as Recursion. And the Function is called as Recursive Function.
+
+notes- when a big or complex problem depends upon a same type or/and small problem then the recorsion can be used.
+eg- 2^5=2*2*2*2*2 &
+    2^5=2*2^4 || 2^4=2*2^3 || 2^3=2*2^2 || 2^2=2*2
+    

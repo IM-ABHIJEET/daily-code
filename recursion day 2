@@ -27,3 +27,30 @@ bool isSorted(int arr[],int size){
   }
 
 ------------------------------------------------------------------------------------------------
+
+<<<===Code for the sum of the elements of the array using resursion===>>>>
+
+#include<iostream>
+using namespace std;
+  
+int Sum(int arr[],int size){
+    if(size==0){   // Base case: if the size is 0, return 0
+        return 0;
+    }
+    if(size==1){    // Base case: if the size is 1, return the first element
+        return arr[0];
+    }
+    else{
+     
+    return arr[0] + Sum(arr+1,size-1);  // Recursion: add first element to the sum of the rest of the array
+    }
+    
+}
+  int main(){
+      int arr[5]={1,2,3,4,6};
+      int size=5;
+      
+      int result=Sum(arr,size);
+      
+      cout<< "the sum of the element of array is==>> "<<result << endl;
+  }

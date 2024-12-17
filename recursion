@@ -5,4 +5,95 @@ what is recursion?
 notes- when a big or complex problem depends upon a same type or/and small problem then the recorsion can be used.
 eg- 2^5=2*2*2*2*2 &
     2^5=2*2^4 || 2^4=2*2^3 || 2^3=2*2^2 || 2^2=2*2
-    
+
+
+code for factorial using recursion--
+------------------------------------------------------------------------------------
+ #include<iostream>
+using namespace std;
+ 
+int fact(int n){
+    if(n==0){
+        return 1;
+    }
+    else{
+        return fact(n-1)*n;
+    }
+}
+
+int main() {
+   int n;
+   cin>>n;
+   int F=fact(n);
+   cout<< F << endl;
+}
+
+---------------------------------------------------------------------------------------
+code for exponential power using recursion--
+
+ #include<iostream>
+using namespace std;
+ 
+int power(int n,int m){
+    if(m==0){
+        return 1;
+    }
+    else{
+        return power(n,m-1)*n;
+    }
+}
+
+int main() {
+   int n,m;
+   cin>>n>>m;
+   int P=power(n,m);
+   cout<< P << endl;
+}
+
+--------------------------------------------------------------------------------------
+code for Counting using recursion--
+
+TAIL RECURSION==>>
+
+ #include<iostream>
+using namespace std;
+ 
+void count(int n){
+    if(n==0){
+        return ;
+    }
+  cout<<n<<" ";
+  count(n-1);
+
+}
+
+int main() {
+   int n;
+   cin>>n;
+   count(n);
+   
+}
+
+HEAD RECURSION==>>
+
+ #include<iostream>
+using namespace std;
+ 
+void count(int n){
+    if(n==0){
+        return ;
+    }
+  
+   count(n-1);
+   cout<<n<<" ";
+
+}
+
+int main() {
+   int n;
+   cin>>n;
+   count(n);
+   
+}
+
+

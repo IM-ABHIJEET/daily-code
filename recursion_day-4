@@ -1,0 +1,34 @@
+// code for checking Palindrom using recursion //
+--------------------------------------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+bool isPalindrom(string str, int i, int j){
+    if(i>=j){
+        return true;
+    }
+    if(str[i]!=str[j]){
+        return false;
+    }
+    else{
+        i++;
+        j--;
+        return isPalindrom(str,i,j);
+    }
+}
+    
+
+int main(){
+    cout<<"__________Welcome to daily code_________"<< endl;
+    string name="abhijeet";
+    bool ans=isPalindrom(name,0,name.length()-1);
+    if(ans){
+    cout<< "Its is a Palindrom" << endl;
+    }
+    else{
+        cout<< "Is not a palindrom"<< endl;
+    }
+    
+    
+    return 0;
+}
+________________________________________________________________________________________________________________________________________________

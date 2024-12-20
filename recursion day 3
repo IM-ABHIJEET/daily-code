@@ -1,0 +1,105 @@
+// code for linear Search  using recursion //
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+bool linearsearch(int arr[], int size, int key){
+    //base case
+    if(size==0){
+        return false;
+        
+    }
+    if(arr[0]==key){
+        return true;
+    }
+    //recursive relation
+    else{
+        bool R = linearsearch(arr+1,size-1,key);
+        return R;
+    
+    }
+}
+
+int main(){
+    cout<<"__________Welcome to daily code_________"<< endl;
+    int arr[10];
+    int key,size;
+    cout<< "Enter the size : "; 
+    cin>>size;
+    cout<<"Enter the element of the array : "<<endl;
+    for(int i=0;i<size;i++){ 
+        cin >> arr[i];
+    }
+    cout<< "Enter the key : ";
+    cin>>key;
+    
+    bool ans=linearsearch(arr,size,key);
+    if(ans){
+        cout<<"Present"<< endl;
+    }
+    else{
+        cout<<"Not Present"<< endl;
+    }
+    
+    return 0;
+}
+
+
+
+____________________________________________________________________________________________________________________________________________________________________________
+
+
+// code for binarySearch  using recursion //
+#include <iostream>
+using namespace std;
+
+bool binarysearch(int arr[], int start,int end, int key){
+    int mid;
+    mid=(start+end)/2;
+//base case
+    if(start>end){
+        return false;
+    }
+    if(arr[mid]==key){
+        return true;
+    }
+    if(arr[mid]>key){
+        bool R = binarysearch(arr,mid+1,end,key);
+        return R;
+    }
+    else{
+        bool P = binarysearch(arr,start,mid-1,key);
+        return P;
+    }
+    
+}
+
+int main(){
+    cout<<"__________Welcome to daily code_________"<< endl;
+    int arr[10];
+    int size,start,end,key;
+    cout<<"Enter the size of the array : ";
+    cin>> size ;
+    cout<<"Enter the element of the array : "<<endl;
+    for(int i=0;i<size;i++){ 
+        cout<<"Enter element no."<<i<<":";
+        cin >> arr[i];
+    }
+    cout<< "Enter the key : ";
+    cin>>key;
+    
+    bool ans=binarysearch(arr,start,end,key);
+    if(ans){
+        cout<<"Present"<< endl;
+    }
+    else{
+        cout<<"Not Present"<< endl;
+    }
+    
+    return 0;
+}
+
+
+
+
+
